@@ -5,10 +5,11 @@
 }
 
 .container {
-    outline: 1px solid red; /* чтобы контейнер был виден, в конце можно будет удалить это св-во */
+    outline: 1px solid red;
+    /* чтобы контейнер был виден, в конце можно будет удалить это св-во */
     margin: 0 auto;
     width: 100%;
-    /* 📍 Максимальная ширина для контейнера */
+    max-width: 1140px;
 }
 
 body {
@@ -32,16 +33,23 @@ header span {
 
 .main-section {
     background-color: #fafaff;
-    padding: 60px 0;
+    padding: 260px 0; /*попробовать испрать позже*/
     min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-self: center;
     /* 📍 Свойства flexbox для размещения container-a вертикально по центру */
 }
 
 .main-section .wrapper {
+    display: flex;
+    align-items: center;
     /* 📍 Свойствa flexbox для размещения блока с текстом и изображения в ряд, и центрирования их по вертикали */
 }
 
 .text-wrapper {
+    max-width: 425px;
     /* 📍 Cвойство для ограничения ширины блока с текстом в первой секции */
 }
 
@@ -76,7 +84,7 @@ select {
     padding: 8px 12px;
     font-weight: 400;
     font-size: 16px;
-    appearance: none; 
+    appearance: none;
     background-image: url("./ep_arrow-down.svg");
     background-repeat: no-repeat;
     background-position: right 12px top 50%;
@@ -177,7 +185,8 @@ table {
     margin: 0 auto;
 }
 
-th, td {
+th,
+td {
     padding: 12px 15px;
 }
 
