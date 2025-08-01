@@ -75,7 +75,7 @@ header span {
 .about-section .wrapper {
     display: flex;
     flex-wrap: wrap;
-    gap: 146px;
+   
     row-gap: 60px;
 
 }
