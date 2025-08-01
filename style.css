@@ -6,7 +6,7 @@
 
 .container {
     outline: 1px solid red;
-    /* чтобы контейнер был виден, в конце можно будет удалить это св-во */
+
     margin: 0 auto;
     width: 100%;
     max-width: 1140px;
@@ -39,18 +39,15 @@ header span {
     display: flex;
     flex-direction: column;
     align-self: center;
-    /* 📍 Свойства flexbox для размещения container-a вертикально по центру */
 }
-
 .main-section .wrapper {
     display: flex;
     align-items: center;
-    /* 📍 Свойствa flexbox для размещения блока с текстом и изображения в ряд, и центрирования их по вертикали */
+
 }
 
 .text-wrapper {
     max-width: 425px;
-    /* 📍 Cвойство для ограничения ширины блока с текстом в первой секции */
 }
 
 .main-title {
@@ -74,29 +71,39 @@ header span {
 }
 
 .about-section .wrapper {
-    /* 📍 Свойствa flexbox для отступов между элементами select, .info-wrapper и .skills-wrapper  */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 146px;
+    row-gap: 60px;
+
 }
 
 select {
-    border: 1px solid rgba(48, 48, 48, 0.3);
+    border: 1px solid #2965F1;
     border-radius: 5px;
     width: 150px;
+    height: 36px;
     padding: 8px 12px;
     font-weight: 400;
     font-size: 16px;
     appearance: none;
-    background-image: url("./ep_arrow-down.svg");
+    background-image: url("./images/ep_arrow-down.svg");
     background-repeat: no-repeat;
     background-position: right 12px top 50%;
+}
+.select{
+    min-width: 100%;
 }
 
 select:hover,
 .text-field:hover {
+    
     /* 📍 Стили для выпадающего списка и текстового поля при наведении курсора */
 }
 
 
 .info-wrapper {
+    display: flex;
     /* 📍 Свойство flexbox для расположения 2-х списков в ряд */
 }
 
@@ -108,42 +115,54 @@ select:hover,
 
 .frameworks,
 .books {
-    min-width: 50%;
+    min-width: 570px;
 }
 
 .frameworks-list,
 .books-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
     /* 📍 Свойства flexbox для отступов между элементами в списках */
 }
 
 .frameworks-list {
     font-weight: 400;
     font-size: 16px;
-    list-style-image: url(./solar_map-arrow-up-bold.svg);
+    list-style-image: url(./images/solar_map-arrow-up-bold.svg);
     padding-left: 20px;
 }
 
 .skills-block {
-    /* 📍 Свойства flexbox для расположения формы над элементами с классом .label */
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 .skills {
-    /* 📍 Свойства flexbox для расположения элементов с классом .label */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 570px;
+    
 }
 
 .books-list {
     font-weight: 400;
     font-size: 16px;
     padding-left: 20px;
+    min-width: 570px;
 }
 
 .label {
     font-weight: 400;
     font-size: 16px;
+    
 }
 
 form {
     margin-bottom: 40px;
+    display: flex;
+    gap: 10px;
 }
 
 .text-field {
